@@ -70,6 +70,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/izat.conf:system/vendor/etc/izat.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/vendor/etc/sap.conf
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common
+
 # Init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -129,6 +133,13 @@ PRODUCT_PACKAGES += \
     libshims_boringssl \
     libshims_camera \
     libshims_ims
+
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Thermals
 PRODUCT_COPY_FILES += \
