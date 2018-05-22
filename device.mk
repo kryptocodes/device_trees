@@ -66,6 +66,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/izat.conf:system/vendor/etc/izat.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/vendor/etc/sap.conf
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common
+
 # Init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -107,6 +111,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/data/qmi_config.xml:system/vendor/etc/data/qmi_config.xml \
     $(LOCAL_PATH)/configs/data/dsi_config.xml:system/vendor/etc/data/dsi_config.xml
 
+# RCS
+PRODUCT_PACKAGES += \
+    rcs_service_aidl \
+    rcs_service_aidl.xml \
+    rcs_service_api \
+    rcs_service_api.xml
+
 # Sensors
 PRODUCT_PACKAGES += \
     calmodule.cfg \
@@ -119,6 +130,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf
+
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Thermals
 PRODUCT_COPY_FILES += \
